@@ -1,0 +1,11 @@
+@mixin d-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@mixin container-margin {
+    width: 80%;
+    margin: auto;
+}
