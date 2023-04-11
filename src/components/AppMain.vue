@@ -8,9 +8,7 @@ export default {
 }
 </script>
 
-<template>
-    <h1>Main</h1>
-</template>
+<template></template>
 
 <style scoped lang="scss">
 @use "../styles/partials/mixins";
