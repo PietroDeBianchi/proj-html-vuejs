@@ -28,6 +28,10 @@ export default {
                 <h1>Our Teams<span>.</span></h1>
                 <p>We helps realties to develop their business, our professional team will help
                     you to align your business strategy to the market trends and opportunities.</p>
+                <div class="btn-box">
+                    <button class="read-btn">READ MORE<i class="fa-solid fa-arrow-right-long"></i></button>
+                    <button class="purchase-btn">PURCHASE<i class="fa-solid fa-arrow-right-long"></i></button>
+                </div>
             </div>
 
         </div>
@@ -38,12 +42,12 @@ export default {
 @use "../styles/partials/mixins";
 @use "../styles/partials/variables" as *;
 
-// general tags
+// GENERAL TAGS
 span {
     color: $orange-first-color;
 }
 
-//top header-navigator style
+//HEADER-NAVIGATOR STYLE
 #navigator {
     position: fixed;
     width: 100vw;
@@ -62,14 +66,23 @@ span {
     .headerNavbar {
         @include mixins.d-flex-between;
         gap: 2rem;
+
+        a {
+            color: $black-third-color;
+
+            &:hover {
+                color: $orange-first-color;
+            }
+        }
     }
 }
 
-//top header-Jumbo style
+//HEADER-JUMBO STYLE
 #jumbo {
     background-image: url(../assets/img/rev-slider-main-home-img-03.jpg);
     background-size: cover;
     height: 600px;
+    text-align: start;
 
     .container {
         @include mixins.container-margin;
@@ -83,8 +96,29 @@ span {
 
         h1 {
             font-size: 42px;
+            margin-bottom: 24px;
         }
     }
 
+    // HEADER-JUMBO-BUTTON STYLE
+    .btn-box {
+        display: flex;
+        margin-top: 24px;
+        gap: 16px;
+
+        button {
+            font-size: 12px;
+        }
+
+        .read-btn {
+            @include mixins.button-white;
+            background-color: $white-first-color;
+        }
+
+        .purchase-btn {
+            @include mixins.button-orange;
+            background-color: $orange-first-color;
+        }
+    }
 }
 </style>

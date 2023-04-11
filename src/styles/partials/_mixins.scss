@@ -15,3 +15,30 @@
     width: 80%;
     margin: auto;
 }
+
+@mixin button-white {
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+
+    i {
+        margin-left: 8px;
+        padding-left: 8px;
+        border-left: 1px solid black;
+    }
+}
+
+@mixin button-orange {
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    color: white;
+
+    i {
+        margin-left: 8px;
+        padding-left: 8px;
+        border-left: 1px solid white;
+    }
+}
