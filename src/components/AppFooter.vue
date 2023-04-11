@@ -8,7 +8,9 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+    <h1><i class="fa-solid fa-socks"></i></h1>
+</template>
 
 <style scoped lang="scss">
 @use "../styles/partials/mixins";
