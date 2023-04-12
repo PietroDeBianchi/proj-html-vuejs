@@ -106,10 +106,6 @@ span {
         margin-top: 24px;
         gap: 16px;
 
-        button {
-            font-size: 12px;
-        }
-
         .read-btn {
             @include mixins.button-white;
             background-color: $white-first-color;
