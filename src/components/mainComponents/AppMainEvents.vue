@@ -70,11 +70,11 @@ export default {
                             <h4>{{ event.date[0].day }}</h4>
                             <h6>{{ event.date[0].month }}{{ event.date[0].year }}</h6>
                         </div>
-                        <div>
+                        <div class="textBox">
                             <h4>{{ event.city }}</h4>
-                            <span>{{ event.hour }}, {{ event.date[0].day }} {{ event.date[0].month }} {{ event.date[0].year
-                            }}</span>
-                            <p>{{ event.location }}</p>
+                            <p><i class="fa-regular fa-clock"></i> {{ event.hour }}, {{ event.date[0].day }} {{
+                                event.date[0].month }} {{ event.date[0].year }}</p>
+                            <p><i class="fa-solid fa-location-dot"></i>{{ event.location }}</p>
                             <h5>READ MORE</h5>
                         </div>
                     </div>
@@ -128,28 +128,29 @@ section {
     }
 
     p,
-    span {
-        padding-bottom: 8px;
-    }
-
-    p,
-    span,
     h5 {
         color: $black-first-color;
         font-size: 12px;
+        padding-top: 8px;
     }
 
     h4 {
         font-size: 16px;
     }
 
-    .dateBox {
-        background-color: $orange-first-color;
-        color: $white-first-color ;
-        margin-right: 24px;
-        padding: 8px;
-        text-align: center;
-        vertical-align: top;
+    i {
+        padding-right: 6px;
+        color: $orange-first-color;
     }
+
+}
+
+.dateBox {
+    background-color: $orange-first-color;
+    color: $white-first-color ;
+    margin-right: 24px;
+    padding: 8px;
+    text-align: center;
+    vertical-align: top;
 }
 </style>
