@@ -2,6 +2,7 @@
 import AppMainService from './mainComponents/AppMainService.vue';
 import AppMainFounder from './mainComponents/AppMainFounder.vue';
 import AppMainEvents from './mainComponents/AppMainEvents.vue';
+import AppMainBrief from './mainComponents/AppMainBrief.vue';
 
 export default {
     name: "AppMain",
@@ -12,7 +13,8 @@ export default {
     components: {
         AppMainService,
         AppMainFounder,
-        AppMainEvents
+        AppMainEvents,
+        AppMainBrief
     }
 }
 </script>
@@ -22,6 +24,7 @@ export default {
         <AppMainService></AppMainService>
         <AppMainFounder></AppMainFounder>
         <AppMainEvents></AppMainEvents>
+        <AppMainBrief></AppMainBrief>
     </main>
 </template>
 
