@@ -49,9 +49,11 @@ span {
 
 //HEADER-NAVIGATOR STYLE
 #navigator {
+    z-index: 999;
     position: fixed;
     width: 100vw;
-    padding: 12px 0;
+    padding: 8px 0;
+    background-color: rgba($color: #000000, $alpha: 0.1);
 
     .container {
         @include mixins.d-flex-between;
@@ -81,7 +83,7 @@ span {
 #jumbo {
     background-image: url(../assets/img/rev-slider-main-home-img-03.jpg);
     background-size: cover;
-    height: 600px;
+    height: 650px;
     text-align: start;
 
     .container {
