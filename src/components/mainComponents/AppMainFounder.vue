@@ -79,7 +79,7 @@ section {
     left: 75%;
     transform: translate(-50%, -50%);
     width: 50%;
-    padding: 24px;
+    padding: 32px;
 
     .line {
         margin: 8px 0;

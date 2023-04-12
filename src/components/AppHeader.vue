@@ -24,13 +24,15 @@ export default {
     </section>
     <section id="jumbo">
         <div class="container">
-            <div class="text-box">
-                <h1>Our Teams<span>.</span></h1>
-                <p>We helps realties to develop their business, our professional team will help
-                    you to align your business strategy to the market trends and opportunities.</p>
-                <div class="btn-box">
-                    <button class="read-btn">READ MORE<i class="fa-solid fa-arrow-right-long"></i></button>
-                    <button class="purchase-btn">PURCHASE<i class="fa-solid fa-arrow-right-long"></i></button>
+            <div class="container">
+                <div class="text-box">
+                    <h1>Our Teams<span>.</span></h1>
+                    <p>We helps realties to develop their business, our professional team will help
+                        you to align your business strategy to the market trends and opportunities.</p>
+                    <div class="btn-box">
+                        <button class="read-btn">READ MORE<i class="fa-solid fa-arrow-right-long"></i></button>
+                        <button class="purchase-btn">PURCHASE<i class="fa-solid fa-arrow-right-long"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -82,7 +84,7 @@ span {
 #jumbo {
     background-image: url(../assets/img/rev-slider-main-home-img-03.jpg);
     background-size: cover;
-    height: 650px;
+    height: 700px;
     text-align: start;
 
     .container {
