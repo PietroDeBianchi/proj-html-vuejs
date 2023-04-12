@@ -33,7 +33,6 @@ export default {
                     <button class="purchase-btn">PURCHASE<i class="fa-solid fa-arrow-right-long"></i></button>
                 </div>
             </div>
-
         </div>
     </section>
 </template>

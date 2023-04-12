@@ -59,7 +59,8 @@ span {
 
 section {
     position: relative;
-    height: 500px;
+    min-width: 1200px;
+    height: 450px;
     background-color: $gray-first-color;
 }
 
