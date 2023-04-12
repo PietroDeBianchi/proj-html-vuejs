@@ -5,30 +5,56 @@ export default {
         return {
             events: [
                 {
-                    location: "Melbourne Coaching",
-                    date: "07 Jan 2022",
+                    city: "Melbourne Coaching",
                     hour: "9:00 am - 5:00 pm",
                     location: "Pier St, Port Melbourne VIC 3207, Australia",
+                    date: [
+                        {
+                            day: "07",
+                            month: "Jan ",
+                            year: "2022"
+                        }
+                    ]
                 },
                 {
-                    location: "New York Coaching",
-                    date: "23 Jan 2022",
+                    city: "New York Coaching",
                     hour: "9:00 am - 5:00 pm",
                     location: "Lincoln C. Plaza, New York, NY 10023, Stati Uniti",
-                }, {
-                    location: "London Coaching",
-                    date: "09 Feb 2022",
+                    date: [
+                        {
+                            day: "23",
+                            month: "Jan ",
+                            year: "2022"
+                        }
+                    ]
+                },
+                {
+                    city: "London Coaching",
                     hour: "9:00 am - 5:00 pm",
                     location: "County Hall, London SE1 7PB, Regno Unito",
-                }, {
-                    location: "Rome Coaching",
-                    date: "15 Feb 2022",
+                    date: [
+                        {
+                            day: "09",
+                            month: "Feb ",
+                            year: "2022"
+                        }
+                    ]
+                },
+                {
+                    city: "Rome Coaching",
                     hour: "9:00 am - 5:00 pm",
                     location: "Piazza di Trevi, 00187 Roma RM",
+                    date: [
+                        {
+                            day: "27",
+                            month: "Feb ",
+                            year: "2022"
+                        }
+                    ]
                 },
             ]
         }
-    },
+    }
 }
 
 </script>
@@ -39,12 +65,20 @@ export default {
             <div class="container">
                 <div class="eventsList">
                     <h2>Upcoming Events</h2>
-                    <div class="event" v-for="event in events" :key="index">
-                        <h4>{{ event.location }}</h4>
-                        <span>{{ event.hour }}, {{ event.date }}</span>
-                        <p>{{ event.location }}</p>
-                        <h5>READ MORE</h5>
+                    <div class="event" v-for="(event, index) in events" :key="index">
+                        <div class="dateBox">
+                            <h4>{{ event.date[0].day }}</h4>
+                            <h6>{{ event.date[0].month }}{{ event.date[0].year }}</h6>
+                        </div>
+                        <div>
+                            <h4>{{ event.city }}</h4>
+                            <span>{{ event.hour }}, {{ event.date[0].day }} {{ event.date[0].month }} {{ event.date[0].year
+                            }}</span>
+                            <p>{{ event.location }}</p>
+                            <h5>READ MORE</h5>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -69,40 +103,53 @@ section {
 
 .eventsList {
     background-color: $white-first-color;
-    width: 50%;
+    width: 45%;
     position: absolute;
     top: 50%;
     left: 25%;
     transform: translate(-50%, -50%);
 
     h2 {
-        padding: 12px;
+        padding: 12px 24px;
         background-color: $gray-first-color;
     }
 }
 
 .event {
-    padding: 12px;
+    padding: 12px 24px;
     border-bottom: 1px solid lightgrey;
 
     &:hover {
         background-color: $gray-first-color;
     }
 
-    h4,
-    p,
-    span {
-        padding: 6px 0;
+    div {
+        display: inline-block;
     }
 
     p,
     span {
+        padding-bottom: 8px;
+    }
+
+    p,
+    span,
+    h5 {
         color: $black-first-color;
         font-size: 12px;
     }
 
     h4 {
         font-size: 16px;
+    }
+
+    .dateBox {
+        background-color: $orange-first-color;
+        color: $white-first-color ;
+        margin-right: 24px;
+        padding: 8px;
+        text-align: center;
+        vertical-align: top;
     }
 }
 </style>

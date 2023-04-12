@@ -101,6 +101,10 @@ span {
             font-size: 42px;
             margin-bottom: 24px;
         }
+
+        p {
+            line-height: 24px;
+        }
     }
 
     // HEADER-JUMBO-BUTTON STYLE
