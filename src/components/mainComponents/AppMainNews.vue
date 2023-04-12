@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'AppMainBrief',
+    name: 'AppMainNews',
     data() {
         return {
         }
@@ -13,7 +13,7 @@ export default {
     <section>
         <div class="container">
             <div class="container">
-                <h1>BRIEF-DESCRIPTION</h1>
+                <h1>NEWS</h1>
             </div>
         </div>
     </section>
