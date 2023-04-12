@@ -1,5 +1,6 @@
 <script>
 import AppMainService from './mainComponents/AppMainService.vue';
+import AppMainFounder from './mainComponents/AppMainFounder.vue';
 
 export default {
     name: "AppMain",
@@ -9,12 +10,14 @@ export default {
     },
     components: {
         AppMainService,
+        AppMainFounder
     }
 }
 </script>
 
 <template>
     <AppMainService></AppMainService>
+    <AppMainFounder></AppMainFounder>
 </template>
 
 <style scoped lang="scss">

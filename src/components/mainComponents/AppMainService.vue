@@ -36,6 +36,7 @@ export default {
             <div class="serviceText">
                 <h2>Our Specialities<span>.</span></h2>
                 <p>We offer a wide range of services</p>
+                <div class="line"></div>
             </div>
             <div class="container">
                 <div class="serviceCard" v-for="service in services" :key="index">
@@ -69,7 +70,7 @@ section {
     padding: 24px;
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 35%;
     transform: translate(-50%, -50%);
 
     .serviceText {
@@ -81,6 +82,14 @@ section {
         p {
             margin-bottom: 12px;
         }
+
+        .line {
+            margin: auto;
+            margin-bottom: 16px;
+            width: 80px;
+            height: 1.5px;
+            background-color: $orange-first-color;
+        }
     }
 
     .container {
@@ -89,6 +98,10 @@ section {
         gap: 20px;
         padding-bottom: 12px;
 
+        .serviceCard {
+            padding: 0 8px;
+        }
+
         img {
             min-height: 160px;
             min-width: 160px;
@@ -96,7 +109,7 @@ section {
         }
 
         p {
-            font-size: 15px;
+            font-size: 14px;
             margin-top: 12px;
         }
     }
