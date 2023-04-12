@@ -18,9 +18,11 @@ export default {
 </script>
 
 <template>
-    <AppMainService></AppMainService>
-    <AppMainFounder></AppMainFounder>
-    <AppMainEvents></AppMainEvents>
+    <main>
+        <AppMainService></AppMainService>
+        <AppMainFounder></AppMainFounder>
+        <AppMainEvents></AppMainEvents>
+    </main>
 </template>
 
 <style scoped lang="scss">
