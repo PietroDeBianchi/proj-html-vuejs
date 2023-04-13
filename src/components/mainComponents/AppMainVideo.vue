@@ -37,7 +37,7 @@ section {
 
         &:hover {
             cursor: pointer;
-            background-color: $gray-third-color;
+            background-color: rgba($color: #9a9999, $alpha: 0.3);
         }
 
     }
