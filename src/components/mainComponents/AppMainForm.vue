@@ -3,7 +3,39 @@ export default {
     name: 'AppMainForm',
     data() {
         return {
-        }
+            partners: [
+                {
+                    img: "/src/assets/img/h4-clients-img-01.png",
+                    imghover: "/src/assets/img/h4-clients-img-02.png",
+                },
+                {
+                    img: "/src/assets/img/h4-clients-img-03.png",
+                    imghover: "/src/assets/img/h4-clients-img-04-1.png",
+                },
+                {
+                    img: "/src/assets/img/h4-clients-img-05.png",
+                    imghover: "/src/assets/img/h4-clients-img-06-1.png",
+                },
+                {
+                    img: "/src/assets/img/h4-clients-img-07.png",
+                    imghover: "/src/assets/img/h4-clients-img-08-1.png",
+                },
+                {
+                    img: "/src/assets/img/h4-clients-img-09.png",
+                    imghover: "/src/assets/img/h4-clients-img-10-1.png",
+                },
+            ],
+            displayedPartnerIndex: null,
+        };
+    },
+    methods: {
+        displayedImg(index) {
+            if (this.displayedPartnerIndex === index) {
+                return this.partners[index].imghover;
+            } else {
+                return this.partners[index].img;
+            }
+        },
     },
 }
 
@@ -15,6 +47,9 @@ export default {
             <div class="container child">
                 <div class="contactUs">
                     <div class="map">
+                        <img src="../../assets/img/h1-contact-rev-02.png" alt="mapDot" class="dot1">
+                        <img src="../../assets/img/h1-contact-rev-02.png" alt="mapDot" class="dot2">
+                        <img src="../../assets/img/h1-contact-rev-02.png" alt="mapDot" class="dot3">
                     </div>
                     <div class="formBox">
                         <h2>Contanct Us<span>.</span></h2>
@@ -41,13 +76,16 @@ export default {
                                     <button class="send-btn">SEND<i class="fa-solid fa-arrow-right-long"></i></button>
                                 </div>
                             </form>
-
-
                         </div>
                     </div>
                 </div>
-                <div class="partners">
+                <div class="partnersBox">
+                    <div v-for="(partner, index) in partners" :key="index" class="partnerCard">
+                        <img :src="displayedImg(index)" alt="partner" @mouseover="displayedPartnerIndex = index"
+                            @mouseleave="displayedPartnerIndex = null" />
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -57,12 +95,12 @@ export default {
 @use "../../styles/partials/mixins";
 @use "../../styles/partials/variables" as *;
 
-.container {
-    @include mixins.container-margin;
+section {
+    padding: 96px 0;
 }
 
-.child {
-    padding-top: 96px;
+.container {
+    @include mixins.container-margin;
 }
 
 .contactUs {
@@ -71,11 +109,31 @@ export default {
     gap: 48px;
 
     .map {
+        position: relative;
         background-image: url(../../assets/img/h1-contact-rev-01.png);
         width: 50%;
         height: 80%;
         background-size: contain;
         background-repeat: no-repeat;
+
+        img {
+            position: absolute;
+        }
+
+        .dot1 {
+            top: 38%;
+            left: 10%;
+        }
+
+        .dot2 {
+            top: 34%;
+            left: 50%;
+        }
+
+        .dot3 {
+            top: 62%;
+            left: 30%;
+        }
     }
 
     .formBox {
@@ -125,6 +183,7 @@ form {
 
         input {
             width: 100%;
+            padding-bottom: 8px;
         }
 
     }
@@ -145,5 +204,14 @@ form {
         }
     }
 
+}
+
+.partnersBox {
+    @include mixins.d-flex-between;
+    margin-top: 96px;
+
+    img {
+        width: 100px;
+    }
 }
 </style>

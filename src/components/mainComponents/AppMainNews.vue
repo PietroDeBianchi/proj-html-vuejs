@@ -62,7 +62,7 @@ export default {
 
 section {
     background-color: $gray-first-color;
-    padding: 32px 0;
+    padding: 48px 0;
 }
 
 .container {
