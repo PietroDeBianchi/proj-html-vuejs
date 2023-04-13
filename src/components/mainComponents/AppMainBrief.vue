@@ -57,7 +57,7 @@ export default {
 @use "../../styles/partials/variables" as *;
 
 section {
-    padding: 48px 0;
+    padding: 96px 0;
 }
 
 .container {
