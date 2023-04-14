@@ -40,6 +40,7 @@ export default {
                     <h2>Latest News<span>.</span></h2>
                     <p>Stay up to date on the latest news and events from of Everlead</p>
                     <div class="line"></div>
+                    <img src="../../assets/svg/svg-4.svg" alt="background" class="background">
                 </div>
                 <div class="newsList">
                     <div class="newsBox" v-for="(article, index) in news" :key="index">
@@ -72,6 +73,8 @@ section {
 .titleBox {
     width: 100%;
     text-align: center;
+    position: relative;
+    z-index: 999;
 
     h2 {
         font-size: 40px;
@@ -96,6 +99,8 @@ section {
 .newsList {
     @include mixins.d-flex-between;
     margin-top: 24px;
+    position: relative;
+    z-index: 999;
 
     .newsBox {
         width: calc(100% / 3 - 16px);
@@ -132,5 +137,13 @@ section {
             cursor: pointer;
         }
     }
+}
+
+.background {
+    position: absolute;
+    width: 360px;
+    left: -24%;
+    top: -143%;
+    opacity: 0.7;
 }
 </style>

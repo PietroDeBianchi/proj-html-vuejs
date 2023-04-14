@@ -18,6 +18,7 @@ export default {
                     <img class="reverse" src="../../assets/svg/svg-6.svg" alt="arrow">
                     <img src="../../assets/svg/svg-6.svg" alt="arrow">
                 </div>
+                <img src="../../assets/svg/svg-4.svg" alt="background" class="background">
                 <div class="founderCard">
                     <h2>Max Power</h2>
                     <span>Founder and Executive Director</span>
@@ -101,5 +102,13 @@ section {
             }
         }
     }
+}
+
+.background {
+    position: absolute;
+    width: 360px;
+    left: 71%;
+    top: -29%;
+    opacity: 0.7;
 }
 </style>

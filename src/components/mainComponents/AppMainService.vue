@@ -73,6 +73,7 @@ section {
     left: 50%;
     top: 35%;
     transform: translate(-50%, -50%);
+    z-index: 999;
 
     .serviceText {
         h2 {
