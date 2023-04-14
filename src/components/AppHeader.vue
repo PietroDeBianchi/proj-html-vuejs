@@ -18,6 +18,7 @@ export default {
                     <li v-for="(element) in navbar">
                         <a class="nav-element" href="#"> {{ element }}</a>
                     </li>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </ul>
             </nav>
         </div>
@@ -70,7 +71,8 @@ span {
         @include mixins.d-flex-between;
         gap: 2rem;
 
-        a {
+        a,
+        i {
             color: $black-third-color;
 
             &:hover {
